@@ -45,7 +45,8 @@ sleep 2
 
 echo "-----> Installing cf cli"
 wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key > aptkey.tmp
-apt-key add apt.key.tmp
+echo "-----> end of wget"
+apt-key add aptkey.tmp
 echo "-----> end of wget"
 echo "deb https://packages.cloudfoundry.org/debian stable main" > /etc/apt/sources.list.d/cloudfoundry-cli.list
 apt-get update
