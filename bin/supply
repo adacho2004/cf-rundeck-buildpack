@@ -43,6 +43,14 @@ wget "${RUNDECK_DIST_URL}${RUNDECK_WAR}" -O ${RUNDECK_APP_DIR}/rundeck.war --no-
 echo "-----> end of wget"
 sleep 2
 
+echo "-----> Installing cf cli"
+wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | apt-key add –
+echo "-----> end of wget"
+echo "deb https://packages.cloudfoundry.org/debian stable main" | tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+apt-get update
+echo "-----> end of apt-get update"
+apt-get install cf7-cli
+sleep 2
 
 ##################################################################################
 # Install Rundeck
