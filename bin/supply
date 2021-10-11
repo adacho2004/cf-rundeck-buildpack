@@ -38,7 +38,7 @@ then
 fi
 
 mkdir -p ${RUNDECK_APP_DIR}
-echo "-----> wget ${RUNDECK_DIST_URL}${RUNDECK_WAR}/artifacts/${RUNDECK_WAR}/download"
+echo "-----> wget ${RUNDECK_DIST_URL}${RUNDECK_WAR}"
 wget "${RUNDECK_DIST_URL}${RUNDECK_WAR}" -O ${RUNDECK_APP_DIR}/rundeck.war --no-check-certificate -q
 echo "-----> end of wget"
 sleep 2
