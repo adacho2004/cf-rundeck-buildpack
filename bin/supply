@@ -51,6 +51,7 @@ export PATH=$PATH:${BUILD_DIR}/.java/bin
 export RDECK_BASE=${RUNDECK_APP_DIR}
 
 java -jar ${RUNDECK_APP_DIR}/rundeck.war \
+        -Dserver.http.port=${PORT} \
         -b ${RUNDECK_APP_DIR} \
         --installonly \
         -d
