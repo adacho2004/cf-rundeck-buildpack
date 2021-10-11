@@ -50,7 +50,7 @@ echo "-----> Installing Rundeck"
 export PATH=$PATH:${BUILD_DIR}/.java/bin
 export RDECK_BASE=${RUNDECK_APP_DIR}
 
-java -Dserver.http.port=${PORT} -jar ${RUNDECK_APP_DIR}/rundeck.war \
+java -Dserver.http.port=8080 -jar ${RUNDECK_APP_DIR}/rundeck.war \
         -b ${RUNDECK_APP_DIR} \
         --installonly \
         -d
