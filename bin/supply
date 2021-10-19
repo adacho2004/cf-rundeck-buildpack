@@ -55,7 +55,7 @@ java -jar ${RUNDECK_APP_DIR}/rundeck.war \
         --installonly \
         -d
 echo "-----> End of Installation"
-sleep 2
+# sleep 2
 
 ##################################################################################
 # Install Plugins
@@ -64,6 +64,8 @@ echo "-----> Installing plugins"
 RUNDECK_PLUGIN_FILE=rundeck-plugins.txt
 
 if [ -f "${BUILD_DIR}/$RUNDECK_PLUGIN_FILE" ]; then
+
+    echo "-----> rundeck-plugins.txt found"
 
     RUNDECK_PLUGIN_DIR="${RUNDECK_APP_DIR}/libext"
 
