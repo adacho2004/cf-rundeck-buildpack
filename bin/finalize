@@ -99,7 +99,8 @@ if [ $(which jq) ]; then
 
         echo "       Setting aws s3 bucket config..."
         PROPERTY_PATH=framework.plugin.ExecutionFileStorage.org.rundeck.amazon-s3
-        FRAMEWORK_PROPERTIES=${BUILD_DIR}/rundeck/etc/framework.properties
+        #FRAMEWORK_PROPERTIES=${BUILD_DIR}/rundeck/etc/framework.properties
+        FRAMEWORK_PROPERTIES=/home/vcap/app/rundeck/etc/framework.properties
 
         echo -e "\n$PROPERTY_PATH.AWSAccessKeyId=$ACCESS_KEY_ID\n" >> ${FRAMEWORK_PROPERTIES}
         echo -e "$PROPERTY_PATH.AWSSecretKey=$SECRET_ACCESS_KEY\n" >> ${FRAMEWORK_PROPERTIES}
