@@ -55,7 +55,7 @@ java -jar ${RUNDECK_APP_DIR}/rundeck.war \
         --installonly \
         -d
 echo "-----> End of Installation"
-# sleep 2
+sleep 2
 
 ##################################################################################
 # Install Plugins
