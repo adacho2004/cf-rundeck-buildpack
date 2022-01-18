@@ -13,7 +13,7 @@ echo "-----> Starting Rundeck"
 ADDITIONAL_ARGS="-Dserver.http.port=${PORT}"
 
 #ADDITIONAL_ARGS="${ADDITIONAL_ARGS} -Dlog4j.configrationFile=$RDECK_BASE/server/config/log4j2.properties -Dlogging.config=file:${RDECK_BASE}/server/config/log4j2.properties -Drundeck.jaaslogin=true -Dloginmodule.conf.name=jaas-login.conf -Dloginmodule.name=RDpropertyfilelogin"
-ADDITIONAL_ARGS="${ADDITIONAL_ARGS} -Drundeck.jaaslogin=true -Dloginmodule.conf.name=jaas-login.conf -Dloginmodule.name=RDpropertyfilelogin"
+ADDITIONAL_ARGS="${ADDITIONAL_ARGS} -Dlog4j.configrationFile=$RDECK_BASE/server/config/log4j.properties -Drundeck.jaaslogin=true -Dloginmodule.conf.name=jaas-login.conf -Dloginmodule.name=RDpropertyfilelogin"
 
 
 JAVA_CALL="${ADDITIONAL_ARGS} \
